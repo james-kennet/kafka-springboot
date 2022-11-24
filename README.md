@@ -30,7 +30,7 @@
   * One producer endpoint per platform/topic.
   * One consumer listener per platform/topic.
 * Sample architecture diagram
-    ![My Image](./_external_files/kafka-demo-Sample1-NormalQueue.jpg)
+    ![My Image](./kafka-project/_external_files/kafka-demo-Sample1-NormalQueue.jpg)
 
 ### Use Case #2
 * Kafka single topic with consumer using recordFilterStrategy.
@@ -42,7 +42,7 @@
     * containerFactory = "allPlatformWebsiteFactory"
     * containerFactory = "allPlatformLife400Factory"
 * Sample architecture diagram
-* ![My Image](./_external_files/kafka-demo-Sample2-Filter.jpg)
+* ![My Image](./kafka-project/_external_files/kafka-demo-Sample2-Filter.jpg)
 
 ### Steps in running kafka-project locally.
 - Checkout the project in Github.
