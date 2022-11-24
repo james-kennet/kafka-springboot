@@ -38,8 +38,8 @@ public class AddressProducerController {
 	@Value("${topic.address.create}")
 	private String allPlatformInOneTopic;
 
-	@Value("${topic.address.update}")
-	private String updateAllPlatform;
+//	@Value("${topic.address.update}")
+//	private String updateAllPlatform;
 
 	@PostMapping("/publishSalesForce")
 	public ResponseEntity<String> publishSalesforce(@RequestBody TopicDto topicDto) throws JsonProcessingException {
@@ -81,13 +81,13 @@ public class AddressProducerController {
 		return new ResponseEntity<>(Constants.ERROR_INVALID_TOPIC, HttpStatus.BAD_REQUEST);
 	}
 
-	@PostMapping("/publish-update")
-	public ResponseEntity<String> publishUpdate(@RequestBody TopicDtoUpdate topicDto) throws JsonProcessingException {
-		LOGGER.info("publish-update: Topic :{} to process: {}", topicDto.getTopicName(), JsonUtility.objectToJson(topicDto));
-		if(allPlatformInOneTopic.equals(topicDto.getTopicName())) {
-			objectProducerService.sendUpdate(updateAllPlatform, topicDto);
-			return new ResponseEntity<>(Constants.PUBLISHED_UPDATE_ALL_PLATFORM, HttpStatus.CREATED);
-		}
-		return new ResponseEntity<>(Constants.ERROR_INVALID_TOPIC, HttpStatus.BAD_REQUEST);
-	}
+//	@PostMapping("/publish-update")
+//	public ResponseEntity<String> publishUpdate(@RequestBody TopicDtoUpdate topicDto) throws JsonProcessingException {
+//		LOGGER.info("publish-update: Topic :{} to process: {}", topicDto.getTopicName(), JsonUtility.objectToJson(topicDto));
+//		if(allPlatformInOneTopic.equals(topicDto.getTopicName())) {
+//			objectProducerService.sendUpdate(updateAllPlatform, topicDto);
+//			return new ResponseEntity<>(Constants.PUBLISHED_UPDATE_ALL_PLATFORM, HttpStatus.CREATED);
+//		}
+//		return new ResponseEntity<>(Constants.ERROR_INVALID_TOPIC, HttpStatus.BAD_REQUEST);
+//	}
 }
