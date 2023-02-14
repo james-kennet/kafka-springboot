@@ -1,4 +1,6 @@
-## Sample kafka-project
+## 1. Basic kafka-project - To Do
+
+## 2. Sample kafka-project
 
 ### Prerequisite on running this project:
 - Install Java 11(Needed by Kafkdrop - kafka message viewer).
